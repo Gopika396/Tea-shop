@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tea Haven - Tea Menu</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            background-color: #f7f3ec;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #24352a;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .navbar-nav {
+            gap: 18px;
+        }
+
+        .nav-link {
+            color: #dce7df !important;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+        }
+
+        .page-header {
+            margin-top: 45px;
+            background-color: #e5ddcf;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #24352a;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        .tea-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+            background-color: white;
+        }
+
+        .tea-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .tea-card img {
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .price {
+            color: #a66a2c;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .btn-tea {
+            background-color: #c28b45;
+            color: white;
+            border: none;
+        }
+
+        .btn-tea:hover {
+            background-color: #a97335;
+            color: white;
+        }
+
+        footer {
+            background-color: #24352a;
+            color: white;
+            padding: 45px 0 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #dce7df;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .social-icons a {
+            font-size: 22px;
+            margin-right: 15px;
+        }
+
+        @media (max-width: 800px) {
+
+            .page-header {
+                margin-top: 25px;
+            }
+
+            .page-header h1 {
+                font-size: 35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            TEA HAVEN
+        </a>
+
+        <button class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Tea Menu</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="order.html">Order Online</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<section class="page-header">
+
+    <h1>Our Tea Menu</h1>
+
+    <p>
+        Choose your favorite cup of tea.
+    </p>
+
+</section>
+
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="card tea-card">
+
+                    <img src="masala-tea.jpg"
+                         class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h4>Masala Tea</h4>
+
+                        <p>
+                            Traditional Indian tea with aromatic spices.
+                        </p>
+
+                        <div class="price">
+                            ₹40
+                        </div>
+
+                        <button class="btn btn-tea mt-3"
+                                onclick="selectTea('Masala Tea')">
+                            Select Tea
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card tea-card">
+
+                    <img src="ginger-tea.jpg"
+                         class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h4>Ginger Tea</h4>
+
+                        <p>
+                            Warm and refreshing ginger flavored tea.
+                        </p>
+
+                        <div class="price">
+                            ₹45
+                        </div>
+
+                        <button class="btn btn-tea mt-3"
+                                onclick="selectTea('Ginger Tea')">
+                            Select Tea
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card tea-card">
+
+                    <img src="green-tea.jpg"
+                         class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h4>Green Tea</h4>
+
+                        <p>
+                            Light and refreshing green tea.
+                        </p>
+
+                        <div class="price">
+                            ₹50
+                        </div>
+
+                        <button class="btn btn-tea mt-3"
+                                onclick="selectTea('Green Tea')">
+                            Select Tea
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card tea-card">
+
+                    <img src="lemon-tea.jpg"
+                         class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h4>Lemon Tea</h4>
+
+                        <p>
+                            Refreshing tea with a zesty lemon flavor.
+                        </p>
+
+                        <div class="price">
+                            ₹40
+                        </div>
+
+                        <button class="btn btn-tea mt-3"
+                                onclick="selectTea('Lemon Tea')">
+                            Select Tea
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card tea-card">
+
+                    <img src="black-tea.jpg"
+                         class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h4>Black Tea</h4>
+
+                        <p>
+                            Strong and classic freshly brewed tea.
+                        </p>
+
+                        <div class="price">
+                            ₹35
+                        </div>
+
+                        <button class="btn btn-tea mt-3"
+                                onclick="selectTea('Black Tea')">
+                            Select Tea
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card tea-card">
+
+                    <img src="cardamom-tea.jpg"
+                         class="card-img-top">
+
+                    <div class="card-body text-center">
+
+                        <h4>Cardamom Tea</h4>
+
+                        <p>
+                            Fragrant tea infused with cardamom.
+                        </p>
+
+                        <div class="price">
+                            ₹45
+                        </div>
+
+                        <button class="btn btn-tea mt-3"
+                                onclick="selectTea('Cardamom Tea')">
+                            Select Tea
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="teaMessage"
+             class="text-center mt-5 fw-bold">
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <h3>Tea Haven</h3>
+
+                <p>
+                    Fresh tea, warm moments and delicious flavors.
+                </p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h3>Quick Links</h3>
+
+                <p><a href="index.html">Home</a></p>
+                <p><a href="products.html">Tea Menu</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="gallery.html">Gallery</a></p>
+                <p><a href="contact.html">Contact</a></p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h3>Address</h3>
+
+                <p>
+                    25 Tea Street,<br>
+                    Bengaluru, Karnataka
+                </p>
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <a href="https://www.facebook.com/">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="https://x.com/">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center">
+            © 2026 Tea Haven. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    function selectTea(tea) {
+
+        document.getElementById("teaMessage").innerHTML =
+            "You selected <strong>" + tea +
+            "</strong>. Please go to Order Online to place your order.";
+
+        console.log("Selected tea: " + tea);
+
+        window.alert(
+            tea + " has been selected!"
+        );
+
+    }
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
